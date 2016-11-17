@@ -22,6 +22,7 @@ void setup() {
   delay(2000);
 
   WiFi.begin(wifi_ssid, wifi_password);
+  WiFi.mode(WIFI_STA)
   int wifi_count = 0;
   while (WiFi.status() != WL_CONNECTED) {
     if (wifi_count % 2 == 0) aqm0802_print("WIFI    conn... ");
